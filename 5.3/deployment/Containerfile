@@ -1,0 +1,13 @@
+FROM rust:1.75 as builder
+WORKDIR /usr/src/page-counter
+COPY page-counter/ .
+RUN cargo build --release
+
+FROM debian:stable-slim
+
+RUN apt-get update
+RUN apt-get install -y openssl
+
+COPY --from=builder /usr/src/page-counter/target/release/page-counter /usr/local/bin/page-counter
+
+CMD ["page-counter"]

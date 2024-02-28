@@ -1,0 +1,13 @@
+[package]
+name = "hyper-wasi-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bytes = "1"
+http-body-util = "0.1"
+hyper-util_wasi = { version = "0.1", features = ["tokio"], git = "https://github.com/0xE282B0/hyper-util",  branch = "v0.1.2-WASI" }
+hyper_wasi = { version = "1", features = ["full"], git = "https://github.com/0xE282B0/hyper", branch = "v1.1.0-WASI"}
+tokio_wasi = { version = "1", features = ["rt", "macros", "net", "time", "io-util"]}

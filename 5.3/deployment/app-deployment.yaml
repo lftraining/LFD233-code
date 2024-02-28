@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: page-counter
+  labels:
+    app: page-counter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: page-counter
+  template:
+    metadata:
+      labels:
+        app: page-counter
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "page-counter"
+        dapr.io/app-port: "8081"
+    spec:
+      containers:
+        - name: page-counter
+          image: leonardpahlke/page-counter:latest
+          ports:
+            - containerPort: 8081
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: page-counter
+spec:
+  selector:
+    app: page-counter
+  ports:
+    - protocol: TCP
+      port: 8081
+      targetPort: 8081
+
+---
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: statestore
+spec:
+  type: state.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: "redis-master:6379"
+  - name: redisPassword
+    value: ""
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis-master
+spec:
+  selector:
+    app: redis
+  ports:
+    - protocol: TCP
+      port: 6379
+      targetPort: 6379
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: redis-master
+  labels:
+    app: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: redis
+  template:
+    metadata:
+      labels:
+        app: redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:latest
+          ports:
+            - containerPort: 6379
