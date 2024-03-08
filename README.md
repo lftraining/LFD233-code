@@ -11,8 +11,8 @@ This repository collects the hands on lab's for the trainings course [LFD233 (AD
 * **6.2**: [Subscribing to Configuration Changes](./6.2/)
 * **6.3**: [Retrieving Secrets with Dapr Using the Kubernetes Secrets Provider](./6.3/)
 * **7.2**: [Time-Triggered SQL Statements](./7.2/)
-* **8.2**: [(**TBD**) Wasm middleware](./8.2/)
-* **8.3**: [(**TBD**) Wasm Output Bindings](./8.3/)
+* **8.2**: [WASM middleware](./8.2/)
+* **8.3**: [WASM Output Bindings](./8.3/)
 
 - [LinuxFoundation Dapr WASM Course Lab Repository](#linuxfoundation-dapr-wasm-course-lab-repository)
   - [Dapr with WebAssembly - Detailed Course Outline](#dapr-with-webassembly---detailed-course-outline)

@@ -4,7 +4,7 @@ This lab illustrates the use of the Dapr WASM middleware. The `custom-middleware
 
 ![](./08.02-lab.drawio.png)
 
-**How to complete this lab**: 
+**How to complete this lab**:
 1. if not done before, run `rustup target add wasm32-wasi` to be able to compile to WASI format.
 2. Compile the `custom-go-middleware` application: 
    1. Navigate to the folder with `cd custom-go-middleware`

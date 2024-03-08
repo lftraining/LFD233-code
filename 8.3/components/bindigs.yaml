@@ -7,4 +7,4 @@ spec:
   version: v1
   metadata:
     - name: url
-      value: "file://components/dapr-wasm-binding/target/wasm32-wasi/release/dapr-wasm-binding.wasm"
+      value: "file://dapr-wasm-binding/target/wasm32-wasi/release/dapr-wasm-binding.wasm"
