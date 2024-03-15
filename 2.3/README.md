@@ -2,6 +2,8 @@
 
 This lab focuses on deploying a simple Rust web service using hyper with [WasmEdge](https://wasmedge.org/). WasmEdge is a lightweight, high-performance WebAssembly (WASM) runtime, ideal for edge computing and decentralized cloud applications.
 
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
+
 **How complete the lab**:
 1. Naviagte to the `hyper-wasi-server` folder: `cd hyper-wasi-server`
 2. Build the application in a WASI compatible version format: `cargo build --target wasm32-wasi`

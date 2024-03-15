@@ -4,6 +4,8 @@ This lab is build to illustrate how the Dapr Rust SDK can be used. In this appli
 
 ![Architecture Overview](./04.02-dapr-training.drawio.png)
 
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
+
 **How complete the lab**:
 1. Start Dapr locally: `dapr init`
 2. Run the application: `dapr run --app-id dapr-rust-sdk --app-port 8081 --dapr-http-port 3500 -- cargo run`

@@ -3,6 +3,8 @@
 
 In this lab, we will install Dapr on a Kubernetes cluster. You will need access to a Kubernetes cluster to complete this lab. [Minikube](https://minikube.sigs.k8s.io/docs/) can be used to host a local Kubernetes cluster. 
 
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
+
 **How complete the lab**:
 1. Install Dapr in your Kubernetes cluster using Helm:
    1. `helm repo add dapr https://dapr.github.io/helm-charts/`

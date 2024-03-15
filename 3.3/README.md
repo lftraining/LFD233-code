@@ -2,6 +2,8 @@
 
 In this lab, we will develop an application to communicate with the Dapr sidecar. In the previous lab we used the terminal to send HTTP requests, this can also be done in an application. The application will be served using WasmEdge.
 
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
+
 **How complete the lab**:
 1. Naviagte to the `page-counter` folder: `cd page-counter`
 2. Build the application in a WASI compatible version format: `cargo build --target wasm32-wasi`

@@ -2,7 +2,9 @@
 
 This lab illustrates the use of the Dapr WASM middleware. The `custom-middleware` application is compiled to WASM format and registered as middleware in Dapr. The application updates a header. The application `http-header-check` receives incoming HTTP requests and checks if headers are set. If headers are missing a `StatusCode::BAD_REQUEST` gets returned.
 
-![](./08.02-lab.drawio.png)
+![Architecture overview](./08.02-lab.drawio.png)
+
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
 
 **How to complete this lab**:
 1. if not done before, run `rustup target add wasm32-wasi` to be able to compile to WASI format.

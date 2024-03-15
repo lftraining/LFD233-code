@@ -2,7 +2,9 @@
 
 This lab shows the use of Dapr bindings. The diagram below illustrates the system that we build in this lab.
 
-![](./07-dapr-training.drawio.png)
+![Architecture overview](./07-dapr-training.drawio.png)
+
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
 
 **How to complete the lab**:
 1. Start Dapr: `dapr init --slim`

@@ -6,6 +6,8 @@ The configuration specifies a website and an interval. The application checks ba
 
 ![architecture](06-02-dapr-training.drawio.png)
 
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
+
 **How to start the lab**:
 1. Start Redis locally: `docker run --name my-redis -p 6379:6379 -d redis:6`
 2. Upload two configuration key value pairs into the redis database using the `set_config.sh` script. Example: `./set_config.sh http://google.com 10`. The script uses the [redis-cli](https://redis.io/docs/connect/cli/) which you may need to install first. The CLI is part of the redis-server package. Alternatively you can set the key value pairs `website_url` and `interval_seconds` manually.

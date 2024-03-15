@@ -4,6 +4,8 @@ This lab is build to illustrate how secrets can be used in Dapr. In this applica
 
 ![Architecture Overview](./6.3%20dapr%20wasm%20training%20dapr%20secrets%20crypt.drawio.png)
 
+All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
+
 **How complete the lab**:
 1. **Setup** [K8s cluster](https://minikube.sigs.k8s.io/docs/) and install Dapr.
 2. **Deploy the K8s components**: `kubectl apply -f deployment`
