@@ -1,17 +1,13 @@
-# Using Dapr
+# Deploying a Rust Web Service with WasmEdge
 
-In this lab, we do not have any code and just use the terminal! We will start dapr and get familiar with the dapr sidecar.
+This lab focuses on deploying a simple Rust web service using hyper with [WasmEdge](https://wasmedge.org/). WasmEdge is a lightweight, high-performance WebAssembly (WASM) runtime, ideal for edge computing and decentralized cloud applications.
 
 All applications that are used throughout the entire course are listed under [Installs](https://github.com/lftraining/LFD233-code/?tab=readme-ov-file#installs).
 
 **How complete the lab**:
-1. Discover the CLI: `dapr -h`
-2. Start the default Dapr setup: `dapr init`
-3. Discover containers: `docker ps`
-4. Discover created Dapr resources: `ls ~/.dapr`
-5. Discover created Dapr resources using the Dapr dashboard: `dapr dashboard`
-6. Start the sidecar: `dapr run --app-id blankapp --dapr-http-port 3000`
-7. Use the sidecar to store information in the statestore component: `curl -X POST -H "Content-Type: application/json" -d '[{ "key": "name", "value": "Bruce Wayne"}]' http://localhost:3000/v1.0/state/statestore`
-8. Retrieve stored information using the Dapr sidecar: `curl http://localhost:3000/v1.0/state/statestore/name`
+1. Naviagte to the `hyper-wasi-server` folder: `cd hyper-wasi-server`
+2. Build the application in a WASI compatible version format: `cargo build --target wasm32-wasi`
+3. Run the binary using WasmEdge: `wasmedge target/wasm32-wasi/debug/dapr_wasm_02_wasmedge.wasm`
+4. Naviagte to your browser or use the CLI to check that the application is working: `curl http://127.0.0.1:3000/`
 
 Done!
